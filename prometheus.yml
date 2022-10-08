@@ -1,0 +1,9 @@
+global:
+  scrape_interval:     15s # Default scrape is 15 seconds.
+
+# A scrape configuration for Prometheus to monitor itself
+scrape_configs:
+  - job_name: 'prometheus'
+    scrape_interval: 5s # Used to override the default
+    static_configs:
+      - targets: ['localhost:9090']
