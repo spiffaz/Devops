@@ -1,3 +1,5 @@
 # Devops
 
-Hi! I'm Spiff. Welcome to my Devops Repository!
+Hi! I'm Spiff. 
+
+Welcome to my Devops Repository!
