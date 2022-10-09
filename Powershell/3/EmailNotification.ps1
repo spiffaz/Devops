@@ -1,5 +1,4 @@
 #EmailNotification.ps1
-Import-Module WebAdministration
 
 $date = Get-Date -format "yyyy-MM-dd"
 $path = "\$date.txt" # Path to log file. Put in the entire path
