@@ -1,9 +1,7 @@
 #EmailNotification.ps1
 
 $date = Get-Date -format "yyyy-MM-dd"
-$path = "\$date.txt" # Path to log file. Put in the entire path
-$url = "" 
-$AppPool = "" # Application pool to be recycled
+$path = "\$date.txt" # Path to log file. Put in the entire path.
 
 #Email variables
 $From = "" # Where email is to be sent from
