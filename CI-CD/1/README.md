@@ -67,6 +67,9 @@ Note: The '#' sign indicates that the current user is a root user. '$' is a regu
    
    ![image](https://user-images.githubusercontent.com/35563797/195988157-1daefe2c-9fbc-4de4-8295-70d73e86a063.png)
    
+8.1) In the case that you want to allow the created account use the sudo command, run the command below to add the user to the sudo group.
+      ![image](https://user-images.githubusercontent.com/35563797/195989518-482f4d4b-ca4c-4e5c-b0b3-4aafbf6d6168.png)
+   
 9) Go back to the AWS EC2 dashboard and pick the public ipv4 address of the Web Server.
 ![image](https://user-images.githubusercontent.com/35563797/195988383-ea8d4af7-ea9c-4ae6-abfc-fc7c2a76ac1e.png)
 
