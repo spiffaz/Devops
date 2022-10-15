@@ -13,7 +13,7 @@ provider "aws" {
 }
 
 resource "aws_security_group" "Web-Server-Security-Group" {
-  name = "TLS-Web-Security-Group"
+  name = "Web-Security-Group"
 }
 
 resource "aws_security_group_rule" "allow_TLS_inbound" {
