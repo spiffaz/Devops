@@ -16,12 +16,22 @@ resource "aws_security_group" "Web-Server-Security-Group" {
   name = "Web-Security-Group"
 }
 
-resource "aws_security_group_rule" "allow_TLS_inbound" {
+resource "aws_security_group_rule" "allow_22_TLS_inbound" {
   type              = "ingress"
   security_group_id = aws_security_group.Web-Server-Security-Group.id
 
   from_port   = 22
   to_port     = 22
+  protocol    = "tcp"
+  cidr_blocks = ["0.0.0.0/0"]
+}
+
+resource "aws_security_group_rule" "allow_8080_TLS_inbound" {
+  type              = "ingress"
+  security_group_id = aws_security_group.Web-Server-Security-Group.id
+
+  from_port   = 8080
+  to_port     = 8080
   protocol    = "tcp"
   cidr_blocks = ["0.0.0.0/0"]
 
@@ -35,7 +45,6 @@ resource "aws_security_group_rule" "allow_all_outbound" {
   to_port     = 0
   protocol    = "-1"
   cidr_blocks = ["0.0.0.0/0"]
-
 }
   
 resource "aws_instance" "Web_Server" {
