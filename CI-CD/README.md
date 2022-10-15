@@ -8,3 +8,4 @@ See the content of the directory below.
 
 1) Manually provisioning a Linux Web Server (EC2 instance on AWS).
 2) Setting up a Linux Web Server with Terraform (EC2 instance on AWS).
+3) Provisioning a Jenkins Server with Terraform (EC2 instance on AWS).
