@@ -19,9 +19,12 @@ Steps
 4)   Pick the public ipv4 address from the console output, append ":8080" to it and open in your web browser.
 ![image](https://user-images.githubusercontent.com/35563797/196590808-80883cef-dedc-4203-985e-f3f52d13db0b.png)
 
-5)
+5)   Login to the server, navigate to ``` sudo vi /var/lib/jenkins/secrets/initialAdminPassword ```. To get the admin password.
+![image](https://user-images.githubusercontent.com/35563797/196591733-798eedcb-41fd-4767-ae0f-63db222180a2.png)
+![image](https://user-images.githubusercontent.com/35563797/196592094-7739aeed-3859-4b9f-9a9a-cc2282bd2285.png)
 
-6)
+6)   Cancel the prompt. We would be installing plugins later.
+![image](https://user-images.githubusercontent.com/35563797/196592199-0760792f-f99c-43bd-b2da-3f7f462427fa.png)
 
 7)   Navigate to Admin. Select the configuure option. Edit the password.
 ![image](https://user-images.githubusercontent.com/35563797/196583883-de0e40e4-137e-4ac8-ace6-30bc1329012d.png)
@@ -38,6 +41,7 @@ Steps
 ![image](https://user-images.githubusercontent.com/35563797/196584860-0a8ad0cd-b719-4910-ab22-06e46552474b.png)
 
 11)  Click on apply at the bottom of the page to save.
+
 
 
 Optional - running a test job
