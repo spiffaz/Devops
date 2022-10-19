@@ -16,8 +16,8 @@ Steps
 ``` vi /var/lib/jenkins/secrets/initialAdminPassword ```
 
      Copy the content of the file. That is the admin password.
-4)   Pick the public ipv4 address of the EC2 instance, append ":8080" to it and open in your web browser.
-![image](https://user-images.githubusercontent.com/35563797/196583305-f297a101-0971-4004-a4c0-84774ebeb2e6.png)
+4)   Pick the public ipv4 address from the console output, append ":8080" to it and open in your web browser.
+![image](https://user-images.githubusercontent.com/35563797/196590808-80883cef-dedc-4203-985e-f3f52d13db0b.png)
 
 5)
 
