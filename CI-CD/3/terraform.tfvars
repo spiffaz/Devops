@@ -1,1 +1,1 @@
-instance_name = JenkinsServer
+instance_name = "JenkinsServer"
