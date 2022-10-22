@@ -10,3 +10,4 @@ See the content of the directory below.
 2) Setting up a Linux Web Server with Terraform (EC2 instance on AWS).
 3) Provisioning a Jenkins Server with Terraform (EC2 instance on AWS).
 4) Installation of Maven and Git.
+5) Installing Apache Tomcat on Web Server.
