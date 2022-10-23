@@ -1,0 +1,26 @@
+---
+name: install tomcat server
+hosts: all
+become: true
+vars_file: 
+  - tomcat_vars
+
+tasks:
+- name: install java
+  ansible.builtin.yum:
+    name: java
+    state: latest
+
+- name: download tomcat
+  ansible.builtin.get_url:
+    url: "{{ tomcal-url }}"
+    dest: /usr/local
+
+- name: extract package
+  ansible.builtin.unarchive:
+    src: /usr/local/{{ tomcat-package }}.tar.gz
+    dest: /opt
+    remote_src: yes
+
+- name: start tomcat service
+  shell: /opt/{{ apache-tomcat-8.5.83 }}/bin/startup.sh 
