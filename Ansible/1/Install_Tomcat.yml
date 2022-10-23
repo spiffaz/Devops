@@ -21,4 +21,4 @@ tasks:
     remote_src: yes
 
 - name: start tomcat service
-  shell: nohup /opt/apache-tomcat-8.5.83/bin/startup.sh 
+  shell: /opt/apache-tomcat-8.5.83/bin/startup.sh 
