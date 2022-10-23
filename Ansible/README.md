@@ -1,2 +1,2 @@
 1)   Convert shell script to playbook
-2)   Variables in ansible playbooks
+2)   Dynamic inventory on AWS
