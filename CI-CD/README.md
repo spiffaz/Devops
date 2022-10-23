@@ -11,3 +11,4 @@ See the content of the directory below.
 3) Provisioning a Jenkins Server with Terraform (EC2 instance on AWS).
 4) Installation of Maven and Git.
 5) Installing Apache Tomcat on Web Server.
+6) Java pipeline with Git - Jenkins - Maven - EC2.
