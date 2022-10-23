@@ -1,0 +1,27 @@
+---
+name: install tomcat server
+hosts: all
+become: true
+vars: 
+  - tomcat_url: https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.83/bin/apache-tomcat-8.5.83.tar.gz
+  - tomcat_package: apache-tomcat-8.5.83
+  
+tasks:
+- name: install java
+  ansible.builtin.yum:
+    name: java
+    state: latest
+
+- name: download tomcat
+  ansible.builtin.get_url:
+    url: "{{ tomcal_url }}" # Because this variable starts the line, we have to put it in quotes
+    dest: /usr/local
+
+- name: extract package
+  ansible.builtin.unarchive:
+    src: /usr/local/{{ tomcat_package }}.tar.gz # This variable does ot start the line and does not have to be in quotes
+    dest: /opt
+    remote_src: yes
+
+- name: start tomcat service
+  shell: /opt/{{ apache-tomcat_8.5.83 }}/bin/startup.sh # It is best practive to have spaces before and after the variable name in quotes
