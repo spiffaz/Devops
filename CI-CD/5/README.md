@@ -4,7 +4,11 @@ We would be building on the steps from #2 (Provisioning a web server) and would 
 
 1)   Run terraform apply from the directory to provision the server.
 2)   Login to the server and switch to the root user ``` sudo su ```. RUn the config.sh script.
-3)   Create a password for the ``` devopsuser ``` user by running the command ``` passwd devopsuser ```. Put in a password for the user.
+3)   Create a password for the ``` devopsuser ``` user by running the command ``` passwd devopsuser ```. Put in a password for the user. Restart the sshd service.
+```
+sudo service sshd restart
+```
+
 ![image](https://user-images.githubusercontent.com/35563797/197331940-2a3fa787-2215-4206-a3f5-19a6cab17348.png)
 
 4)   Login with either the default ec2_user with key or devopsuser with the created password.
