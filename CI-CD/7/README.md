@@ -76,6 +76,19 @@ ansible all -m copy -a "src=/home/ansadmin/hello.html dest=/home/ansadmin"
 ```
  ansible all -m yum -a "name=httpd state=latest" --become"
 ```
+![image](https://user-images.githubusercontent.com/35563797/197404960-8c987668-f432-4f0e-b2f6-00be45dd6e10.png)
+
+Checking the host, the service has been installed but not started.
+![image](https://user-images.githubusercontent.com/35563797/197405047-d9bf9442-5770-4e0d-9bdb-8a48b5edffd9.png)
+
+23)  We would start the apache service from ansible using the command below. Login to the host to confirm the service was started.
+```
+ansible all -m service -a "name=httpd state=started" --become
+```
+![image](https://user-images.githubusercontent.com/35563797/197405257-3f6d7c03-f4b4-4c80-a59c-71e1c096ac90.png)
+![image](https://user-images.githubusercontent.com/35563797/197405283-7a485d03-d0fc-47da-b139-b8c6ade7ea9f.png)
+
+
 
 
 
