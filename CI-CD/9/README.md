@@ -42,7 +42,7 @@ COPY ./webapp.war /usr/local/tomcat/webapps
 
 10)  Select send files or execute commands again in the build steps and execute the command below on the docker host.
 ```
-docker run -d --name valaxy_demo -p 8090:8080 docker_demo
+docker run -d --name docker_demo -p 8090:8080 docker_demo
 ```
 
 11)  Run the build, monitor the progress and validate that you are able to view the webpage on your dockerhostip:8090/webapp.
