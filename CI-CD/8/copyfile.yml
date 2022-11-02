@@ -1,0 +1,8 @@
+---
+- hosts: web-servers
+  become: true
+  tasks:
+    - name: copy war to Web servers
+      copy:
+        src: /opt/playbooks/webapp/target/webapp.war
+        dest: /opt/aoache-tomcat-*/webapps
