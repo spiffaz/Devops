@@ -12,3 +12,4 @@ See the content of the directory below.
 4) Installation of Maven and Git.
 5) Installing Apache Tomcat on Web Server.
 6) Java pipeline with Git - Jenkins - Maven - EC2.
+7) Install Ansible and setup passwordless authentication to remote server.
