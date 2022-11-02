@@ -14,3 +14,4 @@ See the content of the directory below.
 6) CI-CD pipeline with Git - Jenkins - Maven - EC2.
 7) Install Ansible and setup passwordless authentication to remote server.
 8) CI-CD pipeline with Git - Jenkins - Maven - Ansible - EC2.
+9) CI-CD pipeline with Git - Jenkins - Maven - Docker.
