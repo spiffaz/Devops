@@ -1,3 +1,5 @@
+Movie api with 5 routes
+
 Install the gorilla mux package in the project directory - ``` go get "github.com/gorilla/mux" ```
 
 PS. There is no database used, only structs and slices. 
