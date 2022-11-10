@@ -1,4 +1,4 @@
-This is a book management system with a mySQL database.
+This is a book management system with a mySQL database. (Work in progress)
 
 See the project structure below:
 
