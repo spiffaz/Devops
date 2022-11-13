@@ -23,4 +23,25 @@ Troubleshooting: The number of subnets in each tier should not be greater than t
 
 Note: NAT gateways might be expensive to light users (billed per hour and by GB of data). An ec2 instance can be provisioned and configured as a NAT server (if you know how to).
 
+Prerequisite:
+1)  Install Terraform.
+2)  Setup an AWS account.
+3)  Create an S3 bucket.
+4)  Login to the AWS CLI on the machine you would be using Terraform on.
 
+Steps:
+1)  Save the file in a directory and name appropriately.
+2)  Modify the s3 backend in the ``` main.tf ``` file to your own s3 bucket.
+    ```
+   backend "s3" {
+    bucket = "spiffaz-infrastructure"
+    key    = "terraform/tfstate"
+    region = "us-east-1"
+   }
+   ```
+3)  View and make changes to the default variables in the ``` variables.tf ``` and ``` terraform.tfvars ``` files where necessary.
+4)  Navigate to the directory in your terminal and run ``` terraform init ``` .
+5)  Run the command ``` terraform plan ``` to confirm that there are no errors.
+6)  Run the ``` terraform apply ``` command to apply the configuration.
+
+7)  Optional - Run the ``` terraform destroy ``` command to delete the created cloud infrastructure.
