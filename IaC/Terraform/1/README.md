@@ -6,7 +6,7 @@ Features:
 
 1)  Use of s3 remote backend to store state file.
 2)  A VPC with 9 subnets (3 public and 6 private) all within 3 availability zones.
-3)  Automatically assigns CIDR blocks to subnets from the specified VPC CIDR block.
+3)  Automatically assigns ipv4 and ipv6 (for public subnets) CIDR blocks to subnets from the specified VPC CIDR block.
 3)  NAT gateways on each public subnet (in each avalilability zone used) for HA.
 4)  Creates and attaches IAM roles to the EC2 instances to ensure the database can be accessed.
 5)  Creation of autoscaling group for each tier to automatically scale when an instance (server) becomes unhealthy.
