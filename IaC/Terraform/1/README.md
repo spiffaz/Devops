@@ -2,6 +2,8 @@
 
 This creates a 3 tier architecture on AWS using Terraform.
 
+![image](https://user-images.githubusercontent.com/35563797/201526460-ceaf1b55-63bc-4d57-b9b6-a19a774b39c5.png)
+
 Features:
 
 1)  Use of s3 remote backend to store state file.
