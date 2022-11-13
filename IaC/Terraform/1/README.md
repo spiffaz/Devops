@@ -1,6 +1,8 @@
-# Create 3 tier architecture
+# 3 Tier architechture in AWS using Terraform
 
-This creates a 3 tier architecture on AWS using Terraform.
+This creates a 3 tier architecture on AWS using Terraform. 
+
+The resources used include : VPC, Subnets, Route Tables, Internet Gateway, NAT Gateway, IAM, AWS Secrets Manager, EC2 instances, Auto Scaling groups, Load balancers, Security groups, S3 and RDS.
 
 ![image](https://user-images.githubusercontent.com/35563797/201526460-ceaf1b55-63bc-4d57-b9b6-a19a774b39c5.png)
 
@@ -33,12 +35,12 @@ Steps:
 1)  Save the file in a directory and name appropriately.
 2)  Modify the s3 backend in the ``` main.tf ``` file to your own s3 bucket.
     ```
-   backend "s3" {
-    bucket = "spiffaz-infrastructure"
-    key    = "terraform/tfstate"
-    region = "us-east-1"
-   }
-   ```
+    backend "s3" {
+      bucket = "spiffaz-infrastructure"
+      key    = "terraform/tfstate"
+      region = "us-east-1"
+    }
+    ```
 3)  View and make changes to the default variables in the ``` variables.tf ``` and ``` terraform.tfvars ``` files where necessary.
 4)  Navigate to the directory in your terminal and run ``` terraform init ``` .
 5)  Run the command ``` terraform plan ``` to confirm that there are no errors.
