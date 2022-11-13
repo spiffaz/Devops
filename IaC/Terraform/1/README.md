@@ -4,6 +4,8 @@ This creates a 3 tier architecture on AWS using Terraform.
 
 The resources used include : VPC, Subnets, Route Tables, Internet Gateway, NAT Gateway, IAM, AWS Secrets Manager, EC2 instances, Auto Scaling groups, Load balancers, Security groups, S3 and RDS.
 
+The repository can be cloned using this link - ``` https://github.com/spiffaz/Terraform3TierArchitechture.git ```
+
 ![image](https://user-images.githubusercontent.com/35563797/201526460-ceaf1b55-63bc-4d57-b9b6-a19a774b39c5.png)
 
 Features:
@@ -47,3 +49,10 @@ Steps:
 6)  Run the ``` terraform apply ``` command to apply the configuration.
 
 7)  Optional - Run the ``` terraform destroy ``` command to delete the created cloud infrastructure.
+
+
+Connect with me on Linkedin here - ``` https://www.linkedin.com/in/azeta-spiff/ ```
+
+Check out my repository showing my expertise in Devops tools here - ``` https://github.com/spiffaz/Devops ```
+
+Happy learning!!! (And exploring)
