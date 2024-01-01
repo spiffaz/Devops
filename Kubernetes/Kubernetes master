@@ -1,0 +1,12 @@
+What is Kubernetes?
+
+Kubernetes master overview
+Api server - All components connect to the api server
+etcd - Key value store, database
+Kubescheduler - schedules resources on nodes. knows what resources are available on each worker node
+  Feasible nodes - nodes that can be deployed to
+Kube controller manager - Responsible for knowing the cluster state. Knows the desired state, current state, compares and configures to the desired state
+Kubelet - Manages the container runtime eg docker, podman
+Kube proxy - Manages network connectivity of containers/pods
+
+Pods are abstractions of containers
