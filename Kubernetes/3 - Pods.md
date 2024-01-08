@@ -14,7 +14,7 @@ It is possible to have multiple containers in a pod. Most people go with 1. Insi
 
 Each pod will naturally have an ip address on the network. The ip address is assigned by the Kube proxy.
 
-Pods are not long lasting, they can be replaced and can be rescheduled on any node. They should not or do not depend on any hard coded requirements or specific nodes.
+Pods are not long lasting, they can be replaced and can be rescheduled on any node. They should not or do not depend on any hard-coded requirements or specific nodes.
 
 Pods are assigned new ip addresses whenever theyre scheduled.
 
@@ -96,13 +96,13 @@ The diagnostic failed (no action should be taken, and the kubelet will make furt
 
 ___
 
-There are 3 types of probes that can be set
-livenessProbe - Indicates whether the container is running. If the liveness probe fails, the container is killed (by the kubelet), and restart policy of the container is triggered. If a container does not provide a liveness probe, the default state is Success.
+3 types of probes can be set
+livenessProbe - Indicates whether the container is running. If the liveness probe fails, the container is killed (by the kubelet), and the restart policy of the container is triggered. If a container does not provide a liveness probe, the default state is Success.
 readinessProbe - Indicates whether the container is ready to respond to requests. If the readiness probe fails, the endpoints controller removes the Pod's IP address from the endpoints of all Services that match the Pod. The default state of readiness before the initial delay is Failure. If a container does not provide a readiness probe, the default state is Success.
-startupProbe - Indicates whether the application within the container is started. All other probes are disabled if a startup probe is provided, until it succeeds. If the startup probe fails, the kubelet kills the container, and the container is subjected to its restart policy. If a container does not provide a startup probe, the default state is Success.
+startupProbe - Indicates whether the application within the container is started. All other probes are disabled if a startup probe is provided until it succeeds. If the startup probe fails, the kubelet kills the container, and the container is subjected to its restart policy. If a container does not provide a startup probe, the default state is Success.
 
 When should you use a liveness probe?
-If the process in your container is able to crash on its own whenever it encounters an issue or becomes unhealthy, you do not necessarily need a liveness probe; the kubelet will automatically perform the correct action in accordance with the Pod's restartPolicy.
+If the process in your container can crash on its own whenever it encounters an issue or becomes unhealthy, you do not necessarily need a liveness probe; the kubelet will automatically perform the correct action by the Pod's restartPolicy.
 
 When should you use a readiness probe?
 If you'd like to start sending traffic to a Pod only when a probe succeeds, specify a readiness probe. In this case, the readiness probe might be the same as the liveness probe, but the existence of the readiness probe in the spec means that the Pod will start without receiving any traffic and only start receiving traffic after the probe starts succeeding.
