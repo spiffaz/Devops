@@ -1,6 +1,6 @@
 Recap
 
-  Remember that Pods are euphemeral? They have short lifespans and can be created and deleted regularly.
+  Remember that Pods are ephemeral? They have short lifespans and can be created and deleted regularly.
     
   Also, remember that pods get new IP addresses whenever they are scheduled. This means you can never use a pod IP address in your application.
 
@@ -10,13 +10,13 @@ In Kubernetes, a Service is a method for exposing a network application that is 
 
 The Service API, part of Kubernetes, is an abstraction to help you expose groups of Pods over a network. Each Service object defines endpoints and a policy about how to make those pods accessible.
 
-In simpler terms, services receive traffic / requests and forward to the specified pods or backends using a specified protocol.
+In simpler terms, services receive traffic/requests and forward them to the specified pods or backends using a specified protocol.
 
-From my desciption so far, you might think that services can only route traffic to Pods. However, services can do more than that. We will talk about those later, but lets focus on Pods for a bit.
+From my description so far, you might think that services can only route traffic to Pods. However, services can do more than that. We will talk about those later, but let's focus on Pods for a bit.
 
 Defining a Service
 
-A Service is a kubernetes object. They can be created, viewed or modified using the Kubernetes API. See a sample definition below.
+A Service is a Kubernetes object. They can be created, viewed or modified using the Kubernetes API. See a sample definition below.
 
 ```
 apiVersion: v1
@@ -115,10 +115,10 @@ Kubernetes Service types allow you to specify what kind of Service you want. The
 1) ClusterIP - Exposes the Service on a cluster-internal IP. Choosing this value makes the Service only reachable from within the cluster. This is the default that is used if you don't explicitly specify a type for a Service. You can expose the Service to the public internet using an Ingress or a Gateway.
 
 2) NodePort - Exposes the Service on each Node's IP at a static port (the NodePort). To make the node port available, Kubernetes sets up a cluster IP address, the same as if you had requested a Service of type: ClusterIP.
-Using a NodePort gives you the freedom to set up your own load balancing solution, to configure environments that are not fully supported by Kubernetes, or even to expose one or more nodes' IP addresses directly.
+Using a NodePort gives you the freedom to set up your load-balancing solution, configure environments that are not fully supported by Kubernetes, or even expose one or more nodes' IP addresses directly.
 Every node in the cluster configures itself to listen on that assigned port and to forward traffic to one of the ready endpoints associated with that Service. You'll be able to contact the type: NodePort Service, from outside the cluster, by connecting to any node using the appropriate protocol (for example: TCP), and the appropriate port (as assigned to that Service).
 
-3) LoadBalancer - Exposes the Service externally using an external load balancer. Kubernetes does not directly offer a load balancing component; you must provide one, or you can integrate your Kubernetes cluster with a cloud provider.
+3) LoadBalancer - Exposes the Service externally using an external load balancer. Kubernetes does not directly offer a load-balancing component; you must provide one, or you can integrate your Kubernetes cluster with a cloud provider.
 On cloud providers which support external load balancers, setting the type field to LoadBalancer provisions a load balancer for your Service.
 
-4) ExternalName - Maps the Service to the contents of the externalName field (for example, to the hostname api.foo.bar.example). The mapping configures your cluster's DNS server to return a CNAME record with that external hostname value. No proxying of any kind is set up.
+4) ExternalName - Maps the Service to the contents of the externalName field (for example, to the hostname API.foo.bar.example). The mapping configures your cluster's DNS server to return a CNAME record with that external hostname value. No proxying of any kind is set up.
