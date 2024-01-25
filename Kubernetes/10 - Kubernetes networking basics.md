@@ -34,3 +34,4 @@ The EndpointSlice API is the mechanism that Kubernetes uses to let your Service 
 Your workload can discover Services within your cluster using DNS
 
 There are a lot more, but these are what I will focus on in subsequent posts
+
