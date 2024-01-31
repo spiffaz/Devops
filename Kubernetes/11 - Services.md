@@ -1,6 +1,6 @@
 Recap
 
-  Remember that Pods are ephemeral? They have short lifespans and can be created and deleted regularly.
+  Remember that Pods are ephemeral? They have short lifespans and can be created and deleted regularly. 
     
   Also, remember that pods get new IP addresses whenever they are scheduled. This means you can never use a pod IP address in your application.
 
